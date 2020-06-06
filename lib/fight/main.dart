@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,11 +27,11 @@ class MyApp extends StatelessWidget {
           "new_page": (context) => NewRoute(),
           "new_param": (context) => EchoRoute(),
           "/": (context) => MyHomePage(
-                title: "Flutter Demo Home Page",
-              )
+            title: "Flutter Demo Home Page",
+          )
         }
 //      home: MyHomePage(title: 'Flutter Demo Home Page'),
-        );
+    );
   }
 }
 
@@ -102,9 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:'
-            ),
+            Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
@@ -129,9 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
             FlatButton(
               child: Text('计数器'),
               textColor: Colors.greenAccent,
-              onPressed: (){
-
-              },
+              onPressed: () {},
             )
           ],
         ),
@@ -161,8 +156,8 @@ class NewRoute extends StatelessWidget {
               onPressed: () async {
                 var result = await Navigator.push(context,
                     MaterialPageRoute(builder: (context) {
-                  return TipRoute(text: "我的提示是xxxx");
-                }));
+                      return TipRoute(text: "我的提示是xxxx");
+                    }));
                 print("路由返回值: $result");
               },
               child: Text('打开提示页'),
@@ -229,9 +224,7 @@ class RandomWordsWidget extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-
-          ],
+          children: <Widget>[],
         ),
       ),
     );
