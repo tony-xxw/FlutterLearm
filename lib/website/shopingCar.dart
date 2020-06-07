@@ -20,6 +20,7 @@ class Product {
   final String name;
 }
 
+
 typedef void CartChangeCallBack(Product project, bool inCart);
 
 class ShopingListItem extends StatelessWidget {
@@ -44,7 +45,6 @@ class ShopingListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new ListTile(
       onTap: () {
         onCartChanged(project, !inCard);
