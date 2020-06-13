@@ -6,9 +6,9 @@ Flutter 学习
 
 ```
 模板代码
-void main() => runApp(SwithAndCheckbox());
+void main() => runApp(SamplePage());
 
-class SwithAndCheckbox extends StatelessWidget {
+class SamplePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return MaterialApp(
@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
      return Scaffold(
       appBar: AppBar(
-        title: Text("单选开关和复选框"),
+
       ),
       body: Column(
         children: <Widget>[],
