@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
      return Scaffold(
       appBar: AppBar(
-
+        title:Text("模板")
       ),
       body: Column(
         children: <Widget>[],
