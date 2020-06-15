@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloflutter/fight/chapter6/CustomScrollViewSample.dart';
+import 'package:helloflutter/fight/chapter6/ScrollController.dart';
 import 'package:helloflutter/fight/chapter6/SingleChildScrollViewSample.dart';
 
 import 'GirdViewSample.dart';
@@ -17,6 +18,7 @@ class MeterDesignPage extends StatelessWidget {
         "list": (context) => ListViewSample(),
         "grid": (context) => GirdViewSample(),
         "custom": (context) => CustomScrollViewSample(),
+        "listener": (context) => ScrollControllerSample(),
         '/': (context) => HomePage(
               title: "MeterDesign 风格容器",
             )
@@ -59,6 +61,12 @@ class HomePage extends StatelessWidget {
               child: Text("custom"),
               onPressed: () {
                 Navigator.pushNamed(context, "custom");
+              },
+            ),
+            FlatButton(
+              child: Text("listener"),
+              onPressed: () {
+                Navigator.pushNamed(context, "listener");
               },
             )
           ],

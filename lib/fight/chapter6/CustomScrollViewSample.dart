@@ -23,8 +23,8 @@ class CustomScrollViewTestRoute extends StatelessWidget {
       child: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            pinned: true,
-            expandedHeight: 250,
+            pinned: true,//滚动appbar是否可以见
+            expandedHeight: 250,//展开高度
             flexibleSpace: FlexibleSpaceBar(
               title: const Text('Demo'),
               background: Image.asset(
@@ -37,10 +37,10 @@ class CustomScrollViewTestRoute extends StatelessWidget {
             padding: EdgeInsets.all(8),
             sliver: SliverGrid(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 4),
+                  crossAxisCount: 2,//gird 每行个数
+                  mainAxisSpacing: 10,//主轴最大间距
+                  crossAxisSpacing: 10,//纵轴最大间距
+                  childAspectRatio: 4),//主轴与纵轴的比例
               delegate:
                   SliverChildBuilderDelegate((BuildContext context, int index) {
                 return Container(
