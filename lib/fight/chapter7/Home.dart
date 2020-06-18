@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloflutter/fight/chapter7/DialogPage.dart';
 
 import 'AsyncApiPage.dart';
 import 'ColorDart.dart';
@@ -19,6 +20,7 @@ class MeterDesignPage extends StatelessWidget {
         "color": (context) => ColorDart(),
         "theme": (context) => ThemePage(),
         "async": (context) => AsyncApiPage(),
+        "dialog": (context) => DialogPage(),
         '/': (context) => HomePage(
               title: "功能性组件",
             )
@@ -67,6 +69,12 @@ class HomePage extends StatelessWidget {
               child: Text("异步API"),
               onPressed: () {
                 Navigator.pushNamed(context, "async");
+              },
+            ),
+            FlatButton(
+              child: Text("Dialog"),
+              onPressed: () {
+                Navigator.pushNamed(context, "dialog");
               },
             ),
           ],
