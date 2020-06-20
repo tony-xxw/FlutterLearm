@@ -6,6 +6,7 @@ import 'ColorDart.dart';
 import 'Intercept.dart';
 import 'ShareDataWidget.dart';
 import 'ThemeDart.dart';
+import 'dialog/dialogUtils.dart';
 
 void main() => runApp(MeterDesignPage());
 
@@ -21,6 +22,7 @@ class MeterDesignPage extends StatelessWidget {
         "theme": (context) => ThemePage(),
         "async": (context) => AsyncApiPage(),
         "dialog": (context) => DialogPage(),
+        "errorDialog": (context) => DialogRouterState(),
         '/': (context) => HomePage(
               title: "功能性组件",
             )
@@ -75,6 +77,12 @@ class HomePage extends StatelessWidget {
               child: Text("Dialog"),
               onPressed: () {
                 Navigator.pushNamed(context, "dialog");
+              },
+            ),
+            FlatButton(
+              child: Text("无法选中Check"),
+              onPressed: () {
+                Navigator.pushNamed(context, "errorDialog");
               },
             ),
           ],
