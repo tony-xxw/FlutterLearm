@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         title: Text("图片与Icon"),
       ),
       body: Column(
-        children: <Widget>[IconFoc()],
+        children: <Widget>[IconFoc(), ImageFoc()],
       ),
     );
   }
