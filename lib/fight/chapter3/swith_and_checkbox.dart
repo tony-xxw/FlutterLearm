@@ -35,12 +35,15 @@ class _HomePageRouter extends State<HomePageRouter> {
         children: <Widget>[
           Switch(
             value: _switchSelected,
+            activeColor: Colors.orange,
+            activeTrackColor: Colors.red,
             onChanged: (value) {
               setState(() {
                 _switchSelected = value;
               });
             },
           ),
+          Text(_switchSelected ? "开" : "关"),
           Checkbox(
             value: _checkboxSelect,
             activeColor: Colors.red,
@@ -49,7 +52,8 @@ class _HomePageRouter extends State<HomePageRouter> {
                 _checkboxSelect = value;
               });
             },
-          )
+          ),
+          Text(_checkboxSelect ? "开" : "关"),
         ],
       ),
     );

@@ -6,9 +6,8 @@ void main() => runApp(new ImageWithIcon());
 class ImageWithIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // TODO:
     return new MaterialApp(
-      title: "图片与Icon",
       home: HomePage(),
     );
   }
@@ -17,7 +16,7 @@ class ImageWithIcon extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // TODO:
     return Scaffold(
       appBar: AppBar(
         title: Text("图片与Icon"),
@@ -32,7 +31,7 @@ class HomePage extends StatelessWidget {
 class ImageFoc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // TODO:
     return Column(
       children: <Widget>[
         Row(
@@ -51,6 +50,7 @@ class ImageFoc extends StatelessWidget {
             Image.network(
               "http://cdn.2haohr.com/ios/img/meeting/tab_nav1_active.png",
               width: 100,
+              color: Colors.orange,
             ),
           ],
         ),
@@ -77,21 +77,36 @@ class ImageFoc extends StatelessWidget {
           children: <Widget>[
             Image(
               image: AssetImage("images/avatar.png"),
-              width: 50,
-              height: 100,
               fit: BoxFit.fill,
             ),
             Image(
               image: AssetImage("images/avatar.png"),
-              width: 50,
+              width: 20,
               height: 100,
               fit: BoxFit.cover,
             ),
             Image(
               image: AssetImage("images/avatar.png"),
+              width:60,
+              fit: BoxFit.contain,
+            ),
+            Image(
+              image: AssetImage("images/avatar.png"),
+              width: 40,
+              height: 60,
+              fit: BoxFit.fitWidth,
+            ),
+            Image(
+              image: AssetImage("images/avatar.png"),
               width: 50,
               height: 100,
-              fit: BoxFit.fitWidth,
+              fit: BoxFit.fitHeight,
+            ),
+            Image(
+              image: AssetImage("images/avatar.png"),
+              width: 50,
+              height: 100,
+              fit: BoxFit.none,
             )
           ],
         )
@@ -111,7 +126,6 @@ class IconFoc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Column(
       children: <Widget>[
         Text(

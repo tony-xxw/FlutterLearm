@@ -7,7 +7,6 @@ void main() => runApp(HomeWidget());
 class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       title: "文本",
       home: TestWidget(),
@@ -29,8 +28,8 @@ class TestWidget extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+            SizedBox(
+              width: 200,
               child: Text(
                 "HelloWorld",
                 textAlign: TextAlign.left,

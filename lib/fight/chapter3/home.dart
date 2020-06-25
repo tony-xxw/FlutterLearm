@@ -5,6 +5,8 @@ import 'package:helloflutter/fight/chapter3/swith_and_checkbox.dart';
 import 'package:helloflutter/fight/chapter3/text.dart';
 
 import 'button.dart';
+import 'form.dart';
+import 'form_input.dart';
 import 'icon_with_image.dart';
 
 void main() => runApp(ChapterTwoHomePage());
@@ -19,7 +21,9 @@ class ChapterTwoHomePage extends StatelessWidget {
         "progress": (context) => Progress(),
         "checkbox": (context) => SwithAndCheckbox(),
         "text": (context) => TestWidget(),
-        "status": (context) => StatusHome()
+        "status": (context) => StatusHome(),
+        "from_intput": (context) => FormPageInput(),
+        "from": (context) => FormStatePage()
       },
       home: HomePage(),
     );
@@ -56,7 +60,15 @@ class HomePage extends StatelessWidget {
           RaisedButton(
             child: Text("状态管理"),
             onPressed: () => {Navigator.pushNamed(context, "status")},
-          )
+          ),
+          RaisedButton(
+            child: Text("输入框 "),
+            onPressed: () => {Navigator.pushNamed(context, "from_intput")},
+          ),
+          RaisedButton(
+            child: Text(" 表单"),
+            onPressed: () => {Navigator.pushNamed(context, "from")},
+          ),
         ],
       ),
     );

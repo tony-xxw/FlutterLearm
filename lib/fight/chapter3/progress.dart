@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
           CircularProgressIndicator(
             backgroundColor: Colors.grey[200],
             valueColor: AlwaysStoppedAnimation(Colors.blue),
-            value: 05,
+            value: .5,
           ),
           //自定义大小
           SizedBox(
