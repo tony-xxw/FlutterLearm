@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           Wrap(
             spacing: 20,
             runSpacing: 4,
-            direction: Axis.horizontal,
+            direction: Axis.vertical,
             alignment: WrapAlignment.center,
             children: <Widget>[
               Chip(
@@ -37,6 +37,34 @@ class HomePage extends StatelessWidget {
                   child: Text('H'),
                 ),
                 label: Text('Lafayette'),
+              ),
+              Chip(
+                avatar: new CircleAvatar(
+                  backgroundColor: Colors.blue,
+                  child: Text('H'),
+                ),
+                label: Text('Mulligan'),
+              ),
+              Chip(
+                avatar: new CircleAvatar(
+                  backgroundColor: Colors.blue,
+                  child: Text('H'),
+                ),
+                label: Text('Mulligan'),
+              ),
+              Chip(
+                avatar: new CircleAvatar(
+                  backgroundColor: Colors.blue,
+                  child: Text('H'),
+                ),
+                label: Text('Mulligan'),
+              ),
+              Chip(
+                avatar: new CircleAvatar(
+                  backgroundColor: Colors.blue,
+                  child: Text('H'),
+                ),
+                label: Text('Mulligan'),
               ),
               Chip(
                 avatar: new CircleAvatar(

@@ -50,12 +50,15 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Text("去除父组件限制,但是父组件的空间还是会存在,如果子组件占有父容器大小,一定是父容器限制"),
-          ConstrainedBox(
-            constraints: BoxConstraints(minWidth: 100, minHeight: 50),
-            child: UnconstrainedBox(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(minWidth: 50, minHeight: 10),
-                child: redBox,
+          DecoratedBox(
+            decoration: BoxDecoration(color: Colors.orange),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minWidth: 100, minHeight: 50),
+              child: UnconstrainedBox(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minWidth: 50, minHeight: 10),
+                  child: redBox,
+                ),
               ),
             ),
           )

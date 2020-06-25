@@ -60,7 +60,7 @@ class FormPage extends State<FormStatePage> {
                           onPressed: () {
                             if ((_formKey.currentState as FormState)
                                 .validate()) {
-                              print("校验通过");
+                              print("校验通过 ${_formKey.currentState}");
                             }
                           },
                         ),

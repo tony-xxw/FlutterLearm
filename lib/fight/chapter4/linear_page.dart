@@ -26,7 +26,6 @@ class HomePage extends StatelessWidget {
       body: Column(
 //        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-
 //      verticalDirection: VerticalDirection.down,
         children: <Widget>[
           Row(

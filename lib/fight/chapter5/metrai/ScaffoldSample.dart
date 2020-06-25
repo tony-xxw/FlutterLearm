@@ -53,7 +53,6 @@ class _ScaffoldRouter extends State<ScaffoldRouter>
       bottomNavigationBar: BottomAppBar(
         color: Colors.white,
         shape: CircularNotchedRectangle(),
-
         child: Row(
           children: <Widget>[
             IconButton(icon: Icon(Icons.home)),
