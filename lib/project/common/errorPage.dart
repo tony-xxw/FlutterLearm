@@ -11,17 +11,13 @@ class ErrorPage extends StatefulWidget {
 }
 
 class ErrorPageState extends State<ErrorPage> {
-  var sErrorStack = new List<Map<String, dynamic>>();
+  static var sErrorStack = new List<Map<String, dynamic>>();
+  static var sErrorName = new List();
 
-  @override
-  void initState() {
-    super.initState();
-
-  }
+  final TextEditingController controller = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Container();
   }
 }
