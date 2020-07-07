@@ -21,7 +21,7 @@ dev_dependencies:
 
 flutter:
   assets:
-    - images/avatar.png
+    - static/images/
 
   uses-material-design: true
 

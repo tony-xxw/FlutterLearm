@@ -35,12 +35,15 @@ class _ListViewSampleSample extends State<ListViewSample> {
                     return Container(
                       padding: EdgeInsets.all(16),
                       alignment: Alignment.center,
-                      child: SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                        ),
+//                      child: SizedBox(
+//                        width: 24,
+//                        height: 24,
+//                        child: CircularProgressIndicator(
+//                          strokeWidth: 2,
+//                        ),
+                      child: Image(
+                        image: AssetImage("images/xxxw.png"),
+                        width: 200,
                       ),
                     );
                   }
