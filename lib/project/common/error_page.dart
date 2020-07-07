@@ -70,6 +70,7 @@ class ErrorPageState extends State<ErrorPage> {
                     onPressed: (){
                       String content = widget.errorMessage;
                       textEditingController.text = content;
+
                     },
                   )
                 ],
