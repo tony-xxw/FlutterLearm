@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:helloflutter/project/common/error_page.dart';
 
 void main() {
 //  runZoned(() {
 //    ErrorWidget.builder =(FlutterErrorDetails details) {
 //      Zone.current.handleUncaughtError(details.exception, details.stack);
-//    }
-  runApp(Main());
+//      return new ErrorPage(details.exception.toString()+"\n"+details.stack.toString(),details)
+//    };
+//  }
+//  runApp(Main());
 }
 
 class Main extends StatelessWidget {

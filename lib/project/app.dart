@@ -1,13 +1,17 @@
 import 'dart:async';
-import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:helloflutter/project/common/event/http_error_event.dart';
 import 'package:helloflutter/project/common/event/index.dart';
 import 'package:helloflutter/project/common/localization/default_localization.dart';
 
 import 'common/net/code.dart';
+import 'package:redux/redux.dart';
+
+import 'redux/xxw_state.dart';
 
 class FlutterReduxApp extends StatefulWidget {
   @override
@@ -18,9 +22,15 @@ class FlutterReduxApp extends StatefulWidget {
 class _FlutterReduxAppState extends State<FlutterReduxApp>
     with HttpErrorListener {
 
+  final store =  Store<XXWState>(appReducer);
+
   @override
   Widget build(BuildContext context) {
-    return null;
+    return  StoreProvider(store: store, child: StoreBuilder<XXWState>(builder: (context,store){
+      return  MaterialApp(
+
+      );
+    },));
   }
 
 }
@@ -102,7 +112,7 @@ mixin HttpErrorListener on State<FlutterReduxApp>{
   showToast(String message) {
     Fluttertoast.showToast(msg: message,
         gravity: ToastGravity.CENTER,
-        toastLength: Toast.LENGTH_LONG)
+        toastLength: Toast.LENGTH_LONG);
   }
 
 
