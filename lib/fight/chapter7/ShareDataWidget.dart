@@ -7,11 +7,13 @@ class ShareDataWidget extends InheritedWidget {
   final int data;
 
   static ShareDataWidget of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<ShareDataWidget>();
+    // return context.dependOnInheritedWidgetOfExactType<ShareDataWidget>();
+    return context.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget;
   }
 
   @override
   bool updateShouldNotify(ShareDataWidget oldWidget) {
+    print("updateShouldNotify oldWidget: ${oldWidget.data}  data: $data");
     return oldWidget.data != data;
   }
 }
@@ -24,8 +26,8 @@ class _TestWidget extends StatefulWidget {
 class __TestWidget extends State<_TestWidget> {
   @override
   Widget build(BuildContext context) {
-//    return Text(ShareDataWidget.of(context).data.toString());
-    return Text("text");
+     return Text(ShareDataWidget.of(context).data.toString());
+    // return Text("text");
   }
 
   @override

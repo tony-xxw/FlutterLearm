@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
+              Text("topRight"),
               Container(
                 width: 120,
                 height: 120,
@@ -32,13 +33,14 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              Text("bottomLeft"),
               Container(
                 color: Colors.blue[50],
                 child: Align(
                   //当父容器没有设置宽高,可以通过factor因子设置子组件大小的倍数为容器大小
                   widthFactor: 2,
                   heightFactor: 2,
-                  alignment: Alignment.topRight,
+                  alignment: Alignment.bottomLeft,
                   child: FlutterLogo(
                     size: 60,
                   ),
@@ -80,5 +82,6 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
+
   }
 }

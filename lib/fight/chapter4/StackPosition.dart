@@ -20,14 +20,10 @@ class HomePage extends StatelessWidget {
         body: ConstrainedBox(
           constraints: BoxConstraints.expand(),
           child: Stack(
-            fit: StackFit.expand,
+            fit: StackFit.loose,
             alignment: Alignment.center, //指定未定位或部分定位widget的对齐方式
             children: <Widget>[
-              Container(
-                child:
-                    Text("Hello world", style: TextStyle(color: Colors.white)),
-                color: Colors.orange,
-              ),
+
               Positioned(
                 left: 18.0,
                 child: Text("I am Jack"),
@@ -35,6 +31,10 @@ class HomePage extends StatelessWidget {
               Positioned(
                 top: 18.0,
                 child: Text("Your friend"),
+              ), Container(
+                child:
+                Text("Hello world", style: TextStyle(color: Colors.white)),
+                color: Colors.orange,
               )
             ],
           ),
