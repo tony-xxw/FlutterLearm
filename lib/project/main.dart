@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_base_sdk/config/logger_manager.dart';
 import 'package:helloflutter/project/common/error_page.dart';
 
 void main() {
@@ -9,7 +10,9 @@ void main() {
 //      return new ErrorPage(details.exception.toString()+"\n"+details.stack.toString(),details)
 //    };
 //  }
-//  runApp(Main());
+Loggers.init();
+Loggers.d("XXW");
+ runApp(Main());
 }
 
 class Main extends StatelessWidget {
